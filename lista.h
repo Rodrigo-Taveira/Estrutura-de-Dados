@@ -100,6 +100,13 @@ public:
             delete temp;
         }
     }
+   
+    void circular(){
+        Node *novo = inicio;
+        while(novo->prox!=NULL)
+            novo = novo->prox;
+        novo->prox = inicio;
+    }
     
     void inserirInicio(int val){
         Node *nova = new Node;
